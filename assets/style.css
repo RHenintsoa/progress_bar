@@ -1,0 +1,337 @@
+body {
+    background: #E1E5F2;
+    margin: 0;
+}
+
+.item {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+#circle1 {
+    background: #BFDBF7;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+#circle2 {
+    background: linear-gradient(#022B3A, #219EBC);
+    height: 280px;
+    width: 130px;
+    animation: animation1 20s infinite;
+}
+
+@keyframes animation1 {
+    from {
+        transform: translateY(160px);
+    }
+
+    to {
+        transform: translateY(-150px);
+    }
+}
+
+/* Animation 2*/
+.item2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#box1 {
+    background: #000814;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animation-box1 4000ms ease alternate;
+
+}
+
+#box2 {
+    background: #0A4C65;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animation-box1 3000ms ease alternate;
+}
+
+#box3 {
+    background: #1982C4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animation-box1 2000ms ease alternate;
+}
+
+#box4 {
+    background: #FFB703;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animation-box1 1000ms ease alternate;
+}
+
+@keyframes animation-box1 {
+    from {
+        transform: translateX(-180px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-box2 {
+    from {
+        transform: translateX(-170px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-box3 {
+    from {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-box4 {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Animation 3*/
+.item3 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.gift {
+    width: 169px;
+    height: 170px;
+    animation: animation-gift 1s ease alternate;
+}
+
+.congrats {
+    font-weight: bold;
+    font-family: cursive;
+    color: #E1E5F2;
+    animation: animation-congrats 1s ease-in alternate;
+}
+
+@keyframes animation-gift {
+    from {
+        transform: translateY(10px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes animation-congrats {
+    from {
+        transform: translateY(80px);
+
+        color: #E1E5F2;
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 1;
+        display: flex;
+        transform: scale(2);
+        color: #000814;
+    }
+}
+
+/* Animation 4*/
+.item4 {
+    display: flex;
+    flex-direction: column;
+}
+.line-square1{
+    display: flex;
+    justify-content: space-between;
+    background: violet;
+    height: 100%;
+    width: 100%;
+}
+.line-square2{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background: green;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+
+#square1 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: #000814;
+    animation: animation-square1 5s ease alternate;
+}
+
+#square2 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: #0A4C65;
+    animation: animation-square2 5s ease alternate;
+}
+
+#square3 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: #FFB703;
+    animation: animation-square3 5s ease alternate;
+}
+#square4{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: rgb(174, 46, 46);
+    animation: animation-square4 5s ease alternate;
+}
+@keyframes animation-square1{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(50px, 60px);
+    }
+}
+@keyframes animation-square2{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(60px, 50px);
+    }
+}
+
+
+/*Animation 5*/
+#star1 {
+    animation: animation-star1 2s ease alternate;
+    /* animation-delay: 6s;*/
+}
+
+#star2 {
+    animation: animation-star2 4s ease alternate;
+    /* animation-delay: 4s;*/
+}
+
+#star3 {
+    animation: animation-star3 6s ease alternate;
+    /* animation-delay: 2s;*/
+}
+
+#star4 {
+    animation: animation-star4 8s ease alternate;
+
+}
+
+@keyframes animation-star1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(5px);
+        opacity: 0, 75;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+@keyframes animation-star2 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(5px);
+        opacity: 0, 75;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+@keyframes animation-star3 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(5px);
+        opacity: 0, 75;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+@keyframes animation-star4 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    75% {
+        transform: translateY(5px);
+        opacity: 0, 75;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
