@@ -8,6 +8,7 @@ body {
     height: 200px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #circle1 {
@@ -181,7 +182,6 @@ body {
 .line-square1{
     display: flex;
     justify-content: space-between;
-    background: violet;
     height: 100%;
     width: 100%;
 }
@@ -189,7 +189,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    background: green;
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
@@ -200,7 +199,7 @@ body {
     height: 40px;
     position: relative;
     background: #000814;
-    animation: animation-square1 5s ease alternate;
+    animation: animation-square1 5s ease infinite;
 }
 
 #square2 {
@@ -208,7 +207,7 @@ body {
     height: 40px;
     position: relative;
     background: #0A4C65;
-    animation: animation-square2 5s ease alternate;
+    animation: animation-square2 5s ease infinite;
 }
 
 #square3 {
@@ -216,21 +215,22 @@ body {
     height: 40px;
     position: relative;
     background: #FFB703;
-    animation: animation-square3 5s ease alternate;
+    animation: animation-square3 5s ease infinite;
 }
 #square4{
     width: 40px;
     height: 40px;
     position: relative;
     background: rgb(174, 46, 46);
-    animation: animation-square4 5s ease alternate;
+    animation: animation-square4 5s ease infinite;
 }
 @keyframes animation-square1{
     from{
-        transform: translate(0);
+        transform: translate(0) ;
     }
     to{
-        transform: translate(50px, 60px);
+        transform: translate(136px, 40px) scale(2) rotateZ(90deg);
+        
     }
 }
 @keyframes animation-square2{
@@ -238,9 +238,26 @@ body {
         transform: translate(0);
     }
     to{
-        transform: translate(60px, 50px);
+        transform: translate(-136px, 40px) scale(2)rotateZ(90deg);
     }
 }
+@keyframes animation-square3{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(136px, -40px) scale(2)rotateZ(90deg);
+    }
+}
+@keyframes animation-square4{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-136px, -40px) scale(2)rotateZ(90deg);
+    }
+}
+
 
 
 /*Animation 5*/
@@ -333,5 +350,24 @@ body {
         transform: translateY(0px);
         opacity: 1;
 
+    }
+}
+/* Animation 6*/
+.circle-down{
+    width: 150px;
+    height: 150px;
+    border-top: dotted 5px #0A4C65;
+   /* border-right: dotted 5px red;
+    border-left: dotted 5px green;
+    border-bottom: dotted 5px yellow;*/
+    border-radius: 50%;
+    animation : animation-circle 5s infinite;
+}
+@keyframes animation-circle{
+    from{
+        transform: rotateZ('0');
+    }
+    to{
+        transform: rotateZ(360deg);
     }
 }
