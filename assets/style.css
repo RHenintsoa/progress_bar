@@ -1,6 +1,10 @@
 body {
-    background: #E1E5F2;
+    background: #D8E2DC;
     margin: 0;
+}
+
+.container-fluid {
+    margin: 10px;
 }
 
 .item {
@@ -9,6 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
 }
 
 #circle1 {
@@ -52,7 +57,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    animation: animation-box1 4000ms ease alternate;
+    animation: animation-box1 4000ms ease infinite;
 
 }
 
@@ -61,7 +66,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    animation: animation-box1 3000ms ease alternate;
+    animation: animation-box2 4000ms ease infinite;
 }
 
 #box3 {
@@ -69,7 +74,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    animation: animation-box1 2000ms ease alternate;
+    animation: animation-box3 4000ms ease infinite;
 }
 
 #box4 {
@@ -77,7 +82,7 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    animation: animation-box1 1000ms ease alternate;
+    animation: animation-box4 4000ms ease   infinite;
 }
 
 @keyframes animation-box1 {
@@ -144,7 +149,7 @@ body {
 .congrats {
     font-weight: bold;
     font-family: cursive;
-    color: #E1E5F2;
+    color: #D8E2DC;
     animation: animation-congrats 1s ease-in alternate;
 }
 
@@ -179,13 +184,15 @@ body {
     display: flex;
     flex-direction: column;
 }
-.line-square1{
+
+.line-square1 {
     display: flex;
     justify-content: space-between;
     height: 100%;
     width: 100%;
 }
-.line-square2{
+
+.line-square2 {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -195,66 +202,75 @@ body {
 }
 
 #square1 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
     background: #000814;
     animation: animation-square1 5s ease infinite;
 }
 
 #square2 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
     background: #0A4C65;
     animation: animation-square2 5s ease infinite;
 }
 
 #square3 {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
     background: #FFB703;
     animation: animation-square3 5s ease infinite;
 }
-#square4{
-    width: 40px;
-    height: 40px;
+
+#square4 {
+    width: 30px;
+    height: 30px;
     position: relative;
     background: rgb(174, 46, 46);
     animation: animation-square4 5s ease infinite;
 }
-@keyframes animation-square1{
-    from{
-        transform: translate(0) ;
-    }
-    to{
-        transform: translate(136px, 40px) scale(2) rotateZ(90deg);
-        
-    }
-}
-@keyframes animation-square2{
-    from{
+
+@keyframes animation-square1 {
+    from {
         transform: translate(0);
     }
-    to{
-        transform: translate(-136px, 40px) scale(2)rotateZ(90deg);
+
+    to {
+        transform: translate(160px, 55px) scale(2) rotateZ(90deg);
+
     }
 }
-@keyframes animation-square3{
-    from{
+
+@keyframes animation-square2 {
+    from {
         transform: translate(0);
     }
-    to{
-        transform: translate(136px, -40px) scale(2)rotateZ(90deg);
+
+    to {
+        transform: translate(-130px, 55px) scale(2)rotateZ(90deg);
     }
 }
-@keyframes animation-square4{
-    from{
+
+@keyframes animation-square3 {
+    from {
         transform: translate(0);
     }
-    to{
-        transform: translate(-136px, -40px) scale(2)rotateZ(90deg);
+
+    to {
+        transform: translate(160px, -55px) scale(2)rotateZ(90deg);
+    }
+}
+
+@keyframes animation-square4 {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(-130px, -55px) scale(2)rotateZ(90deg);
     }
 }
 
@@ -262,22 +278,22 @@ body {
 
 /*Animation 5*/
 #star1 {
-    animation: animation-star1 2s ease alternate;
+    animation: animation-star1 5s ease infinite;
     /* animation-delay: 6s;*/
 }
 
 #star2 {
-    animation: animation-star2 4s ease alternate;
+    animation: animation-star1 5s ease 500ms infinite;
     /* animation-delay: 4s;*/
 }
 
 #star3 {
-    animation: animation-star3 6s ease alternate;
+    animation: animation-star1 5s ease 400ms infinite;
     /* animation-delay: 2s;*/
 }
 
 #star4 {
-    animation: animation-star4 8s ease alternate;
+    animation: animation-star1 5s ease 300ms infinite;
 
 }
 
@@ -299,75 +315,524 @@ body {
     }
 }
 
-@keyframes animation-star2 {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
 
-    75% {
-        transform: translateY(5px);
-        opacity: 0, 75;
-    }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-
-    }
-}
-
-@keyframes animation-star3 {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    75% {
-        transform: translateY(5px);
-        opacity: 0, 75;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-
-    }
-}
-
-@keyframes animation-star4 {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    75% {
-        transform: translateY(5px);
-        opacity: 0, 75;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-
-    }
-}
 /* Animation 6*/
-.circle-down{
+.circle-down {
     width: 150px;
     height: 150px;
     border-top: dotted 5px #0A4C65;
-   /* border-right: dotted 5px red;
+    /* border-right: dotted 5px red;
     border-left: dotted 5px green;
     border-bottom: dotted 5px yellow;*/
     border-radius: 50%;
-    animation : animation-circle 5s infinite;
+    animation: animation-circle 5s infinite;
 }
-@keyframes animation-circle{
-    from{
+
+@keyframes animation-circle {
+    from {
         transform: rotateZ('0');
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/*Animation 7*/
+.item7 {
+    background: url(./img/img3.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: animation-background 20s ease infinite;
+}
+
+@keyframes animation-background {
+    0% {
+        background: url(./img/img3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    25% {
+        background: url(./img/img4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    50% {
+        background: url(./img/img5.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    75% {
+        background: url(./img/img6.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    100% {
+        background: url(./img/img7.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/*Animation 8*/
+.item8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(./img/img10.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: -5px;
+    overflow: hidden;
+}
+
+.line-ball1 {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.ball1 {
+    /* background: #000814;*/
+    background: url(./img/img8.png);
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    animation: animation-ball1 5s alternate;
+}
+
+
+@keyframes animation-ball1 {
+    0% {
+        transform: translate(0) rotateZ(-45deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(50px, 200px) rotateZ(2700deg);
+        opacity: 1;
+    }
+
+}
+
+/*Animation 9*/
+.item9 {
+    background: url(./img/img16.jpg);
+    background-size: cover;
+    display: flex;
+    position: relative;
+    align-items: start;
+    justify-content: left;
+    overflow: hidden;
+}
+.shooting-star{
+    height: 25%;
+    width: 25%;
+    animation: shooting-animation 3s ease-in-out infinite;
+}
+@keyframes shooting-animation {
+    0%{
+       
+        transform: translateX(-40px) translateY(10px) scale(0.5) rotateX(40deg);
+    }
+    /* 50%{
+    
+         transform: translateX(80px) translateY(60px) scale(1) rotateX(180deg);
+    } */
+    100%{
+        
+        transform: translateX(250px) translateY(60px) scale(1.5) rotateX(180deg);
+    }
+}
+/* Animation 10*/
+.item10{
+    background: url(./img/img17.png);
+    background-position: center;
+    border-bottom: solid 2px #000814;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+    padding-bottom: 0px!important;
+    overflow: hidden;
+}
+.car {
+    z-index: 999;
+    animation: car-animation 2s ease-in-out infinite;
+}
+@keyframes car-animation {
+    from {
+        transform: translateY(2px);
+        
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.trees{
+    animation : trees-animation 7s ease-in-out infinite;
+}
+@keyframes trees-animation {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(-250px);
+    }
+}
+.mountains{
+    animation : mountains-animation 10s ease-in-out infinite;
+}
+@keyframes mountains-animation {
+    from {
+        transform: translateX(300px);
+    }
+    to {
+        transform: translateX(-300px);
+    }
+}
+/*Animation 11*/
+.item11{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    overflow: hidden;
+}
+.steam-container{
+    /* background: #000814; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+
+}
+.steam{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.coffee{
+    height: 50%;
+    width: 50%;
+    z-index: 999;
+}
+#steam1{
+    background: #D5BDAF;
+    position: absolute;
+    animation: steam1-animation 6s ease-out infinite;
+}
+#steam2{
+    background: #D5BDAF;
+    position: absolute;
+    animation: steam2-animation 6s ease-out 0.5s infinite;
+}
+#steam3{
+    background: #D5BDAF;
+    animation: steam1-animation 6s ease-out 1s infinite;
+}
+#steam4{
+    background: #D5BDAF;
+    position: absolute;
+    animation: steam2-animation 6s ease-out 2s infinite;
+}
+
+@keyframes steam1-animation {
+    from {transform: translateY(80px) translateX(0) scale(0); opacity: 0.5;}
+    to {transform: translateY( -50px) translateX(-20px) scale(2); opacity: 0;}
+  }
+  @keyframes steam2-animation {
+    from {transform: translateY(80px) translateX(0) scale(0); opacity: 0.5;}
+    to {transform: translateY( -50px) translateX(-10px) scale(2); opacity: 0;}
+  }
+
+/* Animation 12*/
+.item12{
+    background: url(./img/img23.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.title{
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium';
+  
+    margin: auto;
+    width: 0px;
+    overflow: hidden;
+    /* transition: 1s all ease-in-out; */
+    animation:title-animation 7s ease-out infinite;
+}
+@keyframes title-animation {
+    from{
+        width: 0px;
+    
+        opacity: 0.25;
+    }
+    to{
+        width: 70%;
+        margin: auto;
+        border: none;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*Animation 13*/
+.item13 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-load1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    border-top: solid 10px #1982C4;
+    border-bottom: solid 10px #1982C4;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    animation: animation-load1 3s infinite;
+
+}
+
+.circle-load2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    border-left: solid 10px #FFB703;
+    border-right: solid 10px #FFB703;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+    animation: animation-load2 3s infinite;
+}
+
+.circle-load3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-top: solid 10px rgb(174, 46, 46);
+    border-bottom: solid 10px rgb(174, 46, 46);
+    animation: animation-load3 3s infinite;
+}
+
+.circle-load4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-top: solid 10px #000814;
+    border-bottom: solid 10px #000814;
+    animation: animation-load4 3s infinite;
+}
+
+@keyframes animation-load1 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(720deg);
+        border: solid 10px #1982C4;
+    }
+}
+
+@keyframes animation-load2 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(-720deg);
+        border: solid 10px #FFB703;
+    }
+}
+
+@keyframes animation-load3 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(-720deg);
+        border: solid 10px rgb(174, 46, 46);
+    }
+}
+
+@keyframes animation-load4 {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(720deg);
+        border: solid 10px #000814;
+    }
+}
+
+/*Animation 14*/
+.circle-arrow {
+    width: 150px;
+    height: 150px;
+    background: #D8E2DC;
+    border-radius: 50%;
+    animation: animation-arrow 4s infinite;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.arrow1{
+    width: 150px;
+}
+.arrow2{
+    width: 150px;
+}
+@keyframes animation-arrow{
+    from{
+        transform: rotateZ(0deg);
+        opacity: 0;
     }
     to{
         transform: rotateZ(360deg);
+        opacity: 1;
+    }
+}
+/*Animation 15*/
+.item15{
+    margin: auto;
+    position:relative
+}
+.loading{
+    width: 200px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    animation: animation-loading 5s ease infinite;
+}
+.loading-picture{
+    background: #219EBC;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 50%;
+    animation: animation-picture 1s ease alternate;
+   /* animation-iteration-count: 4;*/
+}
+@keyframes animation-loading{
+    0%{
+        width:0px;
+        background: #ECE0B1;
+    }
+    25%{
+        width:40px;
+        background: #EDDEAA;
+    }
+    50%{
+        width:80px;
+        background: #EFDA9C;
+    }
+    50%{
+        width:120px;
+        background: #F3D180;
+    }
+    75%{
+        width:160px;
+        background: #FCBF49;
+    }
+    100%{
+        width:200px;
+        background: #F77F00;
+    }
+}
+@keyframes animation-picture{
+    from{
+       transform: translateY(5);
+      
+    }
+    to{
+        transform: translateY(0);
+       
+    }
+}
+/*Animation 16*/
+.item16{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.download{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: white;
+    animation: downloading 2s ease infinite;
+}
+@keyframes downloading {
+    from{
+        transform: translateY(5px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+/*Animation 17*/
+.circle-loading{
+    width: 150px;
+    height: 150px;
+    border: solid 20px #ADB5BD;
+    border-radius: 50%;
+    animation : circle-loading 4s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+@keyframes circle-loading{
+    0%{
+        border-top: solid 20px #ADB5BD;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    25%{
+        border-top:solid 20px #219EBC;
+        border-right: solid 20px #ADB5BD;
+        border-bottom: solid 20px #ADB5BD;
+        border-left: solid 20px #ADB5BD;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    50%{
+        border-top:solid 20px #219EBC;
+        border-right: solid 20px #219EBC;
+        border-bottom: solid 20px #ADB5BD;
+        border-left: solid 20px #ADB5BD;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    75%{
+        border-top:solid 20px #219EBC;
+        border-right: solid 20px #219EBC;
+        border-bottom: solid 20px #219EBC;
+        border-left: solid 20px #ADB5BD;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    100%{
+        border:solid 20px #219EBC;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     }
 }
